@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool)env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -49,7 +49,7 @@ return [
     | This URL is used by the console to properly generate URLs when using
     | the Artisan command line tool. You should set this to the root of
     | your application so that it is used when running Artisan tasks.
-    |
+    | 使用 Artisan 命令行工具时，控制台使用此 URL 正确生成 URL。 您应该将其设置为应用程序的根目录，以便在运行 Artisan 任务时使用它。
     */
 
     'url' => env('APP_URL', 'http://localhost'),
@@ -64,20 +64,20 @@ return [
     | Here you may specify the default timezone for your application, which
     | will be used by the PHP date and date-time functions. We have gone
     | ahead and set this to a sensible default for you out of the box.
-    |
+    |在这里，您可以为您的应用程序指定默认时区，PHP 日期和日期时间函数将使用该时区。 我们已经着手将其设置为开箱即用的合理默认值。
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'PRC',
 
     /*
     |--------------------------------------------------------------------------
-    | Application Locale Configuration
+    | Application Locale Configuration 应用程序区域设置
     |--------------------------------------------------------------------------
     |
     | The application locale determines the default locale that will be used
     | by the translation service provider. You are free to set this value
     | to any of the locales which will be supported by the application.
-    |
+    |应用程序语言环境决定了翻译服务提供商将使用的默认语言环境。 您可以随意将此值设置为应用程序支持的任何语言环境。
     */
 
     'locale' => 'en',
@@ -90,7 +90,7 @@ return [
     | The fallback locale determines the locale to use when the current one
     | is not available. You may change the value to correspond to any of
     | the language folders that are provided through your application.
-    |
+    |  后备语言环境确定当前语言环境时要使用的语言环境不可用。 您可以更改该值以对应于任何通过您的应用程序提供的语言文件夹。
     */
 
     'fallback_locale' => 'en',
@@ -103,7 +103,7 @@ return [
     | This locale will be used by the Faker PHP library when generating fake
     | data for your database seeds. For example, this will be used to get
     | localized telephone numbers, street address information and more.
-    |
+    |  Faker PHP 库在为您的数据库种子生成假数据时将使用此语言环境。 例如，这将用于获取本地化电话号码、街道地址信息等。
     */
 
     'faker_locale' => 'en_US',
@@ -116,7 +116,9 @@ return [
     | This key is used by the Illuminate encrypter service and should be set
     | to a random, 32 character string, otherwise these encrypted strings
     | will not be safe. Please do this before deploying an application!
-    |
+    | 此密钥由 Illuminate 加密器服务使用，应设置
+    |  到一个随机的 32 个字符的字符串，否则这些加密的字符串
+    | 不会安全的。 请在部署应用程序之前执行此操作！
     */
 
     'key' => env('APP_KEY'),
@@ -125,13 +127,15 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Autoloaded Service Providers
+    | Autoloaded Service Providers  自动加载的服务提供者
     |--------------------------------------------------------------------------
     |
     | The service providers listed here will be automatically loaded on the
     | request to your application. Feel free to add your own services to
     | this array to grant expanded functionality to your applications.
-    |
+    |此处列出的服务提供商将自动加载到
+    |  请求您的应用程序。 随意添加您自己的服务到
+    |此数组为您的应用程序授予扩展功能。
     */
 
     'providers' => [
@@ -179,13 +183,15 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Class Aliases
+    | Class Aliases  类别名
     |--------------------------------------------------------------------------
     |
     | This array of class aliases will be registered when this application
     | is started. However, feel free to register as many as you wish as
     | the aliases are "lazy" loaded so they don't hinder performance.
-    |
+    |这个类别名数组将在此应用程序时注册
+    | 已启动。 但是，请随意注册
+    | 别名是“惰性”加载的，因此它们不会影响性能。
     */
 
     'aliases' => [
