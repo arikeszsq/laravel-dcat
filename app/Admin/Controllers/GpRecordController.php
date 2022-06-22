@@ -20,6 +20,7 @@ class GpRecordController extends AdminController
     {
         return Grid::make(GpRecord::with(['gpList']),function (Grid $grid) {
             $grid->column('id')->sortable();
+            $grid->model()->orderby('id', 'desc');
             $grid->column('gpList.name','项目名称');
             $grid->column('start_price');
             $grid->column('end_price');

@@ -19,6 +19,7 @@ class GpDealLogController extends AdminController
     protected function grid()
     {
         return Grid::make(GpDealLog::with(['gpList']), function (Grid $grid) {
+            $grid->column('id')->sortable();
             $grid->model()->orderby('id', 'desc');
             $grid->column('id')->sortable();
             $grid->column('gpList.name', '项目名称');

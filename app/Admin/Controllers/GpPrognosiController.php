@@ -19,16 +19,17 @@ class GpPrognosiController extends AdminController
     {
         return Grid::make(new GpPrognosi(), function (Grid $grid) {
             $grid->column('id')->sortable();
+            $grid->model()->orderby('id', 'desc');
             $grid->column('title');
             $grid->column('description');
             $grid->column('content');
             $grid->column('is_right');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -66,7 +67,7 @@ class GpPrognosiController extends AdminController
             $form->text('description');
             $form->text('content');
             $form->text('is_right');
-        
+
             $form->display('created_at');
             $form->display('updated_at');
         });

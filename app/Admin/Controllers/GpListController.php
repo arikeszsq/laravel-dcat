@@ -19,6 +19,7 @@ class GpListController extends AdminController
     {
         return Grid::make(new GpList(), function (Grid $grid) {
             $grid->column('id')->sortable();
+            $grid->model()->orderby('id', 'desc');
             $grid->column('code');
             $grid->column('name');
             $grid->column('add_price');
@@ -26,10 +27,10 @@ class GpListController extends AdminController
             $grid->column('bak');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -69,7 +70,7 @@ class GpListController extends AdminController
             $form->text('add_price');
             $form->text('now_price');
             $form->text('bak');
-        
+
             $form->display('created_at');
             $form->display('updated_at');
         });
