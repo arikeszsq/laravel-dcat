@@ -2,8 +2,8 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Repositories\GpRecord;
 use App\Models\GpList;
+use App\Models\GpRecord;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
@@ -18,12 +18,9 @@ class GpRecordController extends AdminController
      */
     protected function grid()
     {
-//        $names = GpList::getNameList();
-//        var_dump($names);exit;
-
-        return Grid::make(new GpRecord(), function (Grid $grid) {
+        return Grid::make(GpRecord::with(['gpList']),function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('name');
+            $grid->column('gpList.name','项目名称');
             $grid->column('start_price');
             $grid->column('end_price');
             $grid->column('avg');
@@ -38,8 +35,11 @@ class GpRecordController extends AdminController
             $grid->column('created_at');
 
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
-
+                // 展开过滤器
+                $filter->expand();
+                // 更改为 panel 布局
+                $filter->panel();
+                $filter->equal('gpList.name','项目名称');
             });
         });
     }
@@ -83,23 +83,30 @@ class GpRecordController extends AdminController
     protected function form()
     {
         return Form::make(new GpRecord(), function (Form $form) {
-            $form->display('id');
-            $form->select('name')->options(GpList::getNameList());
-            $form->decimal('start_price');
-            $form->decimal('end_price');
-            $form->text('change_hand');
-            $form->text('qrr');
-            $form->text('out_num');
-            $form->text('in_num');
-            $form->text('deal_num');
-            $form->text('avg');
-            $form->decimal('max_price');
-            $form->decimal('min_price');
-            $form->text('20_day');
-            $form->text('60_day');
-            $form->text('main_out');
-            $form->multipleImage('img','k线图');
-            $form->textarea('bak');
+            $form->column(4, function (Form $form) {
+                $form->select('gp_id','项目名称')->options(GpList::getNameList())->width(8,4)->required();
+                $form->decimal('start_price')->width(8,4);
+                $form->decimal('end_price')->width(8,4);
+                $form->text('change_hand')->width(8,4);
+                $form->text('main_out')->width(8,4);
+                $form->textarea('bak')->width(8,4);
+            });
+
+            $form->column(4, function (Form $form) {
+                $form->text('qrr')->width(8,4);
+                $form->text('out_num')->width(8,4);
+                $form->text('in_num')->width(8,4);
+                $form->text('deal_num')->width(8,4);
+                $form->image('img','k线图')->width(8,4);
+            });
+
+            $form->column(4, function (Form $form) {
+                $form->text('avg')->width(8,4);
+                $form->decimal('max_price')->width(8,4);
+                $form->decimal('min_price')->width(8,4);
+                $form->text('20_day')->width(8,4);
+                $form->text('60_day')->width(8,4);
+            });
         });
     }
 }

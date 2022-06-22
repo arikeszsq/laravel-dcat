@@ -17,7 +17,7 @@ class GpList extends Model
         $data = [];
         foreach ($lists as $gp)
         {
-            $data[$gp->name]=$gp->name;
+            $data[$gp->id]=$gp->name;
         }
         return $data;
     }

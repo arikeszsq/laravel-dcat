@@ -4,6 +4,7 @@ return [
         'GpRecord' => '数据采集',
     ],
     'fields' => [
+        'gp_id' => '项目名称',
         'code' => '代码',
         'name' => '名称',
         'start_price' => '开盘价',
