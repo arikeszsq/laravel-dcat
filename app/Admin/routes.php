@@ -16,4 +16,8 @@ Route::group([
 
 
     $router->resource('news', 'ZNewsController');
+    $router->resource('deal-log', 'GpDealLogController');
+    $router->resource('pro', 'GpPrognosiController');
+    $router->resource('record', 'GpRecordController');
+    $router->resource('record-lists', 'GpListController');
 });

@@ -47,10 +47,39 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection payload
      * @property Grid\Column|Collection exception
      * @property Grid\Column|Collection failed_at
+     * @property Grid\Column|Collection code
+     * @property Grid\Column|Collection type
+     * @property Grid\Column|Collection num
+     * @property Grid\Column|Collection price
+     * @property Grid\Column|Collection time
+     * @property Grid\Column|Collection add_price
+     * @property Grid\Column|Collection now_price
+     * @property Grid\Column|Collection bak
+     * @property Grid\Column|Collection content
+     * @property Grid\Column|Collection is_right
+     * @property Grid\Column|Collection start_price
+     * @property Grid\Column|Collection end_price
+     * @property Grid\Column|Collection change_hand
+     * @property Grid\Column|Collection qrr
+     * @property Grid\Column|Collection out_num
+     * @property Grid\Column|Collection in_num
+     * @property Grid\Column|Collection deal_num
+     * @property Grid\Column|Collection avg
+     * @property Grid\Column|Collection max_price
+     * @property Grid\Column|Collection min_price
+     * @property Grid\Column|Collection 20_day
+     * @property Grid\Column|Collection 60_day
+     * @property Grid\Column|Collection main_out
+     * @property Grid\Column|Collection img
+     * @property Grid\Column|Collection 7_avg
+     * @property Grid\Column|Collection 10_avg
+     * @property Grid\Column|Collection 15_gvg
+     * @property Grid\Column|Collection 20_avg
+     * @property Grid\Column|Collection 25_avg
+     * @property Grid\Column|Collection 30_avg
      * @property Grid\Column|Collection email
      * @property Grid\Column|Collection token
      * @property Grid\Column|Collection email_verified_at
-     * @property Grid\Column|Collection content
      * @property Grid\Column|Collection deleted_at
      *
      * @method Grid\Column|Collection name(string $label = null)
@@ -89,10 +118,39 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection payload(string $label = null)
      * @method Grid\Column|Collection exception(string $label = null)
      * @method Grid\Column|Collection failed_at(string $label = null)
+     * @method Grid\Column|Collection code(string $label = null)
+     * @method Grid\Column|Collection type(string $label = null)
+     * @method Grid\Column|Collection num(string $label = null)
+     * @method Grid\Column|Collection price(string $label = null)
+     * @method Grid\Column|Collection time(string $label = null)
+     * @method Grid\Column|Collection add_price(string $label = null)
+     * @method Grid\Column|Collection now_price(string $label = null)
+     * @method Grid\Column|Collection bak(string $label = null)
+     * @method Grid\Column|Collection content(string $label = null)
+     * @method Grid\Column|Collection is_right(string $label = null)
+     * @method Grid\Column|Collection start_price(string $label = null)
+     * @method Grid\Column|Collection end_price(string $label = null)
+     * @method Grid\Column|Collection change_hand(string $label = null)
+     * @method Grid\Column|Collection qrr(string $label = null)
+     * @method Grid\Column|Collection out_num(string $label = null)
+     * @method Grid\Column|Collection in_num(string $label = null)
+     * @method Grid\Column|Collection deal_num(string $label = null)
+     * @method Grid\Column|Collection avg(string $label = null)
+     * @method Grid\Column|Collection max_price(string $label = null)
+     * @method Grid\Column|Collection min_price(string $label = null)
+     * @method Grid\Column|Collection 20_day(string $label = null)
+     * @method Grid\Column|Collection 60_day(string $label = null)
+     * @method Grid\Column|Collection main_out(string $label = null)
+     * @method Grid\Column|Collection img(string $label = null)
+     * @method Grid\Column|Collection 7_avg(string $label = null)
+     * @method Grid\Column|Collection 10_avg(string $label = null)
+     * @method Grid\Column|Collection 15_gvg(string $label = null)
+     * @method Grid\Column|Collection 20_avg(string $label = null)
+     * @method Grid\Column|Collection 25_avg(string $label = null)
+     * @method Grid\Column|Collection 30_avg(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
      * @method Grid\Column|Collection token(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
-     * @method Grid\Column|Collection content(string $label = null)
      * @method Grid\Column|Collection deleted_at(string $label = null)
      */
     class Grid {}
@@ -136,10 +194,39 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection payload
      * @property Show\Field|Collection exception
      * @property Show\Field|Collection failed_at
+     * @property Show\Field|Collection code
+     * @property Show\Field|Collection type
+     * @property Show\Field|Collection num
+     * @property Show\Field|Collection price
+     * @property Show\Field|Collection time
+     * @property Show\Field|Collection add_price
+     * @property Show\Field|Collection now_price
+     * @property Show\Field|Collection bak
+     * @property Show\Field|Collection content
+     * @property Show\Field|Collection is_right
+     * @property Show\Field|Collection start_price
+     * @property Show\Field|Collection end_price
+     * @property Show\Field|Collection change_hand
+     * @property Show\Field|Collection qrr
+     * @property Show\Field|Collection out_num
+     * @property Show\Field|Collection in_num
+     * @property Show\Field|Collection deal_num
+     * @property Show\Field|Collection avg
+     * @property Show\Field|Collection max_price
+     * @property Show\Field|Collection min_price
+     * @property Show\Field|Collection 20_day
+     * @property Show\Field|Collection 60_day
+     * @property Show\Field|Collection main_out
+     * @property Show\Field|Collection img
+     * @property Show\Field|Collection 7_avg
+     * @property Show\Field|Collection 10_avg
+     * @property Show\Field|Collection 15_gvg
+     * @property Show\Field|Collection 20_avg
+     * @property Show\Field|Collection 25_avg
+     * @property Show\Field|Collection 30_avg
      * @property Show\Field|Collection email
      * @property Show\Field|Collection token
      * @property Show\Field|Collection email_verified_at
-     * @property Show\Field|Collection content
      * @property Show\Field|Collection deleted_at
      *
      * @method Show\Field|Collection name(string $label = null)
@@ -178,10 +265,39 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection payload(string $label = null)
      * @method Show\Field|Collection exception(string $label = null)
      * @method Show\Field|Collection failed_at(string $label = null)
+     * @method Show\Field|Collection code(string $label = null)
+     * @method Show\Field|Collection type(string $label = null)
+     * @method Show\Field|Collection num(string $label = null)
+     * @method Show\Field|Collection price(string $label = null)
+     * @method Show\Field|Collection time(string $label = null)
+     * @method Show\Field|Collection add_price(string $label = null)
+     * @method Show\Field|Collection now_price(string $label = null)
+     * @method Show\Field|Collection bak(string $label = null)
+     * @method Show\Field|Collection content(string $label = null)
+     * @method Show\Field|Collection is_right(string $label = null)
+     * @method Show\Field|Collection start_price(string $label = null)
+     * @method Show\Field|Collection end_price(string $label = null)
+     * @method Show\Field|Collection change_hand(string $label = null)
+     * @method Show\Field|Collection qrr(string $label = null)
+     * @method Show\Field|Collection out_num(string $label = null)
+     * @method Show\Field|Collection in_num(string $label = null)
+     * @method Show\Field|Collection deal_num(string $label = null)
+     * @method Show\Field|Collection avg(string $label = null)
+     * @method Show\Field|Collection max_price(string $label = null)
+     * @method Show\Field|Collection min_price(string $label = null)
+     * @method Show\Field|Collection 20_day(string $label = null)
+     * @method Show\Field|Collection 60_day(string $label = null)
+     * @method Show\Field|Collection main_out(string $label = null)
+     * @method Show\Field|Collection img(string $label = null)
+     * @method Show\Field|Collection 7_avg(string $label = null)
+     * @method Show\Field|Collection 10_avg(string $label = null)
+     * @method Show\Field|Collection 15_gvg(string $label = null)
+     * @method Show\Field|Collection 20_avg(string $label = null)
+     * @method Show\Field|Collection 25_avg(string $label = null)
+     * @method Show\Field|Collection 30_avg(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
      * @method Show\Field|Collection token(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
-     * @method Show\Field|Collection content(string $label = null)
      * @method Show\Field|Collection deleted_at(string $label = null)
      */
     class Show {}
