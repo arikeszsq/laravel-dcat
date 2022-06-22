@@ -29,6 +29,7 @@ class GpRecordController extends AdminController
             $grid->column('min_price');
             $grid->column('change_hand');
             $grid->column('qrr');
+            $grid->column('gap','振幅');
             $grid->column('deal_num');
             $grid->column('20_day');
             $grid->column('60_day');
@@ -90,6 +91,7 @@ class GpRecordController extends AdminController
                 $form->decimal('end_price')->width(8,4);
                 $form->text('change_hand')->width(8,4);
                 $form->text('main_out')->width(8,4);
+                $form->text('gap','振幅')->width(8,4);
                 $form->textarea('bak')->width(8,4);
             });
 
