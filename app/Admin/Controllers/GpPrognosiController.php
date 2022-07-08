@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Admin\Repositories\GpPrognosi;
+use App\Models\GpList;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
@@ -23,7 +24,7 @@ class GpPrognosiController extends AdminController
             $grid->column('title');
             $grid->column('description');
             $grid->column('content');
-            $grid->column('is_right');
+            $grid->column('is_right')->using([1=>'正确',2=>'错误'])->label([1=>'success',2=>'danger']);
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 
@@ -63,10 +64,11 @@ class GpPrognosiController extends AdminController
     {
         return Form::make(new GpPrognosi(), function (Form $form) {
             $form->display('id');
+            $form->select('gp_id', '项目名称')->options(GpList::getNameList())->required();
             $form->text('title');
             $form->text('description');
-            $form->text('content');
-            $form->text('is_right');
+            $form->textarea('content');
+            $form->radio('is_right')->options([1=>'正确',2=>'错误']);
 
             $form->display('created_at');
             $form->display('updated_at');

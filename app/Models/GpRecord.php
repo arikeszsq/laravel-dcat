@@ -9,7 +9,7 @@ class GpRecord extends Model
 {
 
     protected $table = 'gp_record';
-    public $timestamps = false;
+    public $timestamps = true;
 
 
     public function gpList()
