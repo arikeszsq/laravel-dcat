@@ -24,10 +24,10 @@ class ZNewsController extends AdminController
             $grid->column('content');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -62,8 +62,8 @@ class ZNewsController extends AdminController
             $form->display('id');
             $form->text('title');
             $form->text('description');
-            $form->text('content');
-        
+            $form->textarea('content');
+
             $form->display('created_at');
             $form->display('updated_at');
         });
