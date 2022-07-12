@@ -22,6 +22,7 @@ class GpRecordController extends AdminController
             $grid->column('id')->sortable();
             $grid->model()->orderby('id', 'desc');
             $grid->column('gpList.name','项目名称');
+            $grid->column('status','今日涨跌');
             $grid->column('start_price');
             $grid->column('end_price');
             $grid->column('avg');
@@ -57,6 +58,7 @@ class GpRecordController extends AdminController
     {
         return Show::make($id, new GpRecord(), function (Show $show) {
             $show->field('id');
+            $show->field('status');
             $show->field('code');
             $show->field('name');
             $show->field('start_price');
@@ -87,6 +89,7 @@ class GpRecordController extends AdminController
         return Form::make(new GpRecord(), function (Form $form) {
             $form->column(4, function (Form $form) {
                 $form->select('gp_id','项目名称')->options(GpList::getNameList())->width(8,4)->required();
+                $form->decimal('status','今日涨跌')->width(8,4);
                 $form->decimal('start_price')->width(8,4);
                 $form->decimal('end_price')->width(8,4);
                 $form->text('change_hand')->width(8,4);
