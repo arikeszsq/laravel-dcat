@@ -1,5 +1,7 @@
 <?php
 
+use App\Providers\PayMethodServiceProvider;
+
 return [
 
     /*
@@ -133,9 +135,8 @@ return [
     | The service providers listed here will be automatically loaded on the
     | request to your application. Feel free to add your own services to
     | this array to grant expanded functionality to your applications.
-    |此处列出的服务提供商将自动加载到
-    |  请求您的应用程序。 随意添加您自己的服务到
-    |此数组为您的应用程序授予扩展功能。
+    |  此处列出的服务提供商将自动加载到请求您的应用程序。
+    |  随意添加您自己的服务到此数组为您的应用程序授予扩展功能。
     */
 
     'providers' => [
@@ -172,12 +173,17 @@ return [
 
         /*
          * Application Service Providers...
+         * 应用服务提供者
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+
+
+        PayMethodServiceProvider::class,
 
     ],
 
