@@ -11,7 +11,8 @@ class MyPage implements Renderable
 
     public function render()
     {
-        return view('admin.pages.my-page')->render();
+        $data = ['name'=>'my-page'];
+        return view('admin.pages.my-page')->with($data)->render();
     }
 
 }
