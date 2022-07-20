@@ -14,6 +14,8 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
 
+    $router->get('/test','TestController@index');
+
 
     $router->resource('news', 'ZNewsController');
     $router->resource('deal-log', 'GpDealLogController');
