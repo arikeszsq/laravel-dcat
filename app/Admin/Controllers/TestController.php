@@ -24,9 +24,9 @@ class TestController extends Controller
           'description'=>'描述'
         ];
 
-        return $content->body(new MyPage());
+//        return $content->body(new MyPage());
 
-//        return $content->body(view('admin.pages.my-page',$data));
+        return $content->body(view('admin.pages.my-page',$data));
 
 //        return $content->view('admin.pages.my-page')->with($data);
 

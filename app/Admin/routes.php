@@ -22,4 +22,6 @@ Route::group([
     $router->resource('pro', 'GpPrognosiController');
     $router->resource('record', 'GpRecordController');
     $router->resource('record-lists', 'GpListController');
+    $router->resource('comments', 'CommentController');
+    $router->resource('posts', 'PostController');
 });
